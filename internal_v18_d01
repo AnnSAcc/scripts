@@ -4,9 +4,8 @@
 #Anna Shvetsova
 #added Direct Debit payment request and response
 
-
 get_acc_number(){
-	echo -e 'Please, paste Billing Account number...'
+	echo -e 'Please, paste BillINVNUM Account number...'
 	read acc_num
 	export acc_num="$(echo "$acc_num")" 
 }
@@ -15,59 +14,59 @@ get_acc_number(){
 
 
 
-evault(){
+vaultVV(){
 	
 	# periodic --> ebill
-	cd /d01/netcracker/rbm/rbmdev/infinys_root/VFHU_ENGAGEONE/output/periodicbill/ebill/vault
-	find \( -iname "*.pdf" -o -iname "*.jrn" \) -print0 | xargs -I{} -0 cp -v {} /d01/netcracker/rbm/rbmdev/infinys_root/E2Vault/PBBI_CCM/Vault/server/download
+	cd /d01/root/rbm/dev/infinys_root/Project_1ENG/output/periodicbill/ebill/vaultV
+	find \( -iname "*.pdf" -o -iname "*.jrn" \) -print0 | xargs -I{} -0 cp -v {} /d01/root/rbm/dev/infinys_root/vaultVV/PBBI_CCM/vaultV/server/download
 	
 	# creditnote --> ebill
-	cd /d01/netcracker/rbm/rbmdev/infinys_root/VFHU_ENGAGEONE/output/creditnote/ebill/vault
-	find \( -iname "*.pdf" -o -iname "*.jrn" \) -print0 | xargs -I{} -0 cp -v {} /d01/netcracker/rbm/rbmdev/infinys_root/E2Vault/PBBI_CCM/Vault/server/download
+	cd /d01/root/rbm/dev/infinys_root/Project_1ENG/output/creditnote/ebill/vaultV
+	find \( -iname "*.pdf" -o -iname "*.jrn" \) -print0 | xargs -I{} -0 cp -v {} /d01/root/rbm/dev/infinys_root/vaultVV/PBBI_CCM/vaultV/server/download
 	
 	# correctionbill --> ebill
-	cd /d01/netcracker/rbm/rbmdev/infinys_root/VFHU_ENGAGEONE/output/correctionbill/ebill/vault
-	find \( -iname "*.pdf" -o -iname "*.jrn" \) -print0 | xargs -I{} -0 cp -v {} /d01/netcracker/rbm/rbmdev/infinys_root/E2Vault/PBBI_CCM/Vault/server/download
+	cd /d01/root/rbm/dev/infinys_root/Project_1ENG/output/correctionbill/ebill/vaultV
+	find \( -iname "*.pdf" -o -iname "*.jrn" \) -print0 | xargs -I{} -0 cp -v {} /d01/root/rbm/dev/infinys_root/vaultVV/PBBI_CCM/vaultV/server/download
 	
 	# periodic --> print
-	cd /d01/netcracker/rbm/rbmdev/infinys_root/VFHU_ENGAGEONE/output/periodicbill/print/vault
-	find \( -iname "*.pdf" -o -iname "*.jrn" \) -print0 | xargs -I{} -0 cp -v {} /d01/netcracker/rbm/rbmdev/infinys_root/E2Vault/PBBI_CCM/Vault/server/download
+	cd /d01/root/rbm/dev/infinys_root/Project_1ENG/output/periodicbill/print/vaultV
+	find \( -iname "*.pdf" -o -iname "*.jrn" \) -print0 | xargs -I{} -0 cp -v {} /d01/root/rbm/dev/infinys_root/vaultVV/PBBI_CCM/vaultV/server/download
 	
 	# creditnote --> print
-	cd /d01/netcracker/rbm/rbmdev/infinys_root/VFHU_ENGAGEONE/output/creditnote/print/vault
-	find \( -iname "*.pdf" -o -iname "*.jrn" \) -print0 | xargs -I{} -0 cp -v {} /d01/netcracker/rbm/rbmdev/infinys_root/E2Vault/PBBI_CCM/Vault/server/download
+	cd /d01/root/rbm/dev/infinys_root/Project_1ENG/output/creditnote/print/vaultV
+	find \( -iname "*.pdf" -o -iname "*.jrn" \) -print0 | xargs -I{} -0 cp -v {} /d01/root/rbm/dev/infinys_root/vaultVV/PBBI_CCM/vaultV/server/download
 
 	# correctionbill --> print
-	cd /d01/netcracker/rbm/rbmdev/infinys_root/VFHU_ENGAGEONE/output/correctionbill/print/vault
-	find \( -iname "*.pdf" -o -iname "*.jrn" \) -print0 | xargs -I{} -0 cp -v {} /d01/netcracker/rbm/rbmdev/infinys_root/E2Vault/PBBI_CCM/Vault/server/download
+	cd /d01/root/rbm/dev/infinys_root/Project_1ENG/output/correctionbill/print/vaultV
+	find \( -iname "*.pdf" -o -iname "*.jrn" \) -print0 | xargs -I{} -0 cp -v {} /d01/root/rbm/dev/infinys_root/vaultVV/PBBI_CCM/vaultV/server/download
 
 	
 	# periodic --> noprint
-	cd /d01/netcracker/rbm/rbmdev/infinys_root/VFHU_ENGAGEONE/output/periodicbill/noprint/vault
-	find \( -iname "*.pdf" -o -iname "*.jrn" \) -print0 | xargs -I{} -0 cp -v {} /d01/netcracker/rbm/rbmdev/infinys_root/E2Vault/PBBI_CCM/Vault/server/download
+	cd /d01/root/rbm/dev/infinys_root/Project_1ENG/output/periodicbill/noprint/vaultV
+	find \( -iname "*.pdf" -o -iname "*.jrn" \) -print0 | xargs -I{} -0 cp -v {} /d01/root/rbm/dev/infinys_root/vaultVV/PBBI_CCM/vaultV/server/download
 	
 	# creditnote --> noprint
-	cd /d01/netcracker/rbm/rbmdev/infinys_root/VFHU_ENGAGEONE/output/creditnote/noprint/vault
-	find \( -iname "*.pdf" -o -iname "*.jrn" \) -print0 | xargs -I{} -0 cp -v {} /d01/netcracker/rbm/rbmdev/infinys_root/E2Vault/PBBI_CCM/Vault/server/download
+	cd /d01/root/rbm/dev/infinys_root/Project_1ENG/output/creditnote/noprint/vaultV
+	find \( -iname "*.pdf" -o -iname "*.jrn" \) -print0 | xargs -I{} -0 cp -v {} /d01/root/rbm/dev/infinys_root/vaultVV/PBBI_CCM/vaultV/server/download
 	
 	# correctionbill --> noprint
-	cd /d01/netcracker/rbm/rbmdev/infinys_root/VFHU_ENGAGEONE/output/correctionbill/noprint/vault
-	find \( -iname "*.pdf" -o -iname "*.jrn" \) -print0 | xargs -I{} -0 cp -v {} /d01/netcracker/rbm/rbmdev/infinys_root/E2Vault/PBBI_CCM/Vault/server/download
+	cd /d01/root/rbm/dev/infinys_root/Project_1ENG/output/correctionbill/noprint/vaultV
+	find \( -iname "*.pdf" -o -iname "*.jrn" \) -print0 | xargs -I{} -0 cp -v {} /d01/root/rbm/dev/infinys_root/vaultVV/PBBI_CCM/vaultV/server/download
 	
 
 	
-	cd /d01/netcracker/rbm/rbmdev/infinys_root/E2Vault/PBBI_CCM/Vault
+	cd /d01/root/rbm/dev/infinys_root/vaultVV/PBBI_CCM/vaultV
 	
-	./vault stop
+	./vaultV stop
 	
 	sleep 10
 	
-	./vault start
+	./vaultV start
 	
 	sleep 10
 	
 	./execProcess.sh
-	print "eVault is finished"
+	print "vaultVV is finished"
 	
 	
 }
@@ -75,33 +74,33 @@ evault(){
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 #SMS amd EMAIL PERIODIC
-sending_SmsEmail_periodic (){
-	cd /d01/netcracker/rbm/rbmdev/infinys_root/VFHU_ENGAGEONE/process
-	./sgma_filetransfer.sh PERIODICBILL > /d01/netcracker/rbm/rbmdev/infinys_root/a_script_logs/Sms_PERIODIC_$random5.log 2>&1
+sendINVNUM_SmsEmail_periodic (){
+	cd /d01/root/rbm/dev/infinys_root/Project_1ENG/process
+	./sgma_filetransfer.sh PERIODICBILL > /d01/root/rbm/dev/infinys_root/a_script_logs/Sms_PERIODIC_$random5.log 2>&1
 	sleep 2
-	./ebill_filetransfer.sh PERIODICBILL > /d01/netcracker/rbm/rbmdev/infinys_root/a_script_logs/Email_PERIODIC_$random5.log 2>&1
+	./ebill_filetransfer.sh PERIODICBILL > /d01/root/rbm/dev/infinys_root/a_script_logs/Email_PERIODIC_$random5.log 2>&1
 	sleep 2
-	./print_postprocessing.sh > /d01/netcracker/rbm/rbmdev/infinys_root/a_script_logs/Dresher_PERIODIC_$random5.log 2>&1
+	./print_postprocessINVNUM.sh > /d01/root/rbm/dev/infinys_root/a_script_logs/Dresher_PERIODIC_$random5.log 2>&1
 }
 
 #SMS amd EMAIL CREDITNOTE
-sending_SmsEmail_creditnote (){
-	cd /d01/netcracker/rbm/rbmdev/infinys_root/VFHU_ENGAGEONE/process
-	./sgma_filetransfer.sh CREDITNOTE > /d01/netcracker/rbm/rbmdev/infinys_root/a_script_logs/Sms_CREDITNOTE_$random5.log 2>&1
+sendINVNUM_SmsEmail_creditnote (){
+	cd /d01/root/rbm/dev/infinys_root/Project_1ENG/process
+	./sgma_filetransfer.sh CREDITNOTE > /d01/root/rbm/dev/infinys_root/a_script_logs/Sms_CREDITNOTE_$random5.log 2>&1
 	sleep 2
-	./ebill_filetransfer.sh CREDITNOTE > /d01/netcracker/rbm/rbmdev/infinys_root/a_script_logs/Email_CREDITNOTE_$random5.log 2>&1
+	./ebill_filetransfer.sh CREDITNOTE > /d01/root/rbm/dev/infinys_root/a_script_logs/Email_CREDITNOTE_$random5.log 2>&1
 	sleep 2
-	./print_postprocessing.sh > /d01/netcracker/rbm/rbmdev/infinys_root/a_script_logs/Dresher_CREDITNOTE_$random5.log 2>&1
+	./print_postprocessINVNUM.sh > /d01/root/rbm/dev/infinys_root/a_script_logs/Dresher_CREDITNOTE_$random5.log 2>&1
 }
 
 #SMS amd EMAIL CORRECTIONBILL
-sending_SmsEmail_correctionbill(){
-	cd /d01/netcracker/rbm/rbmdev/infinys_root/VFHU_ENGAGEONE/process
-	./sgma_filetransfer.sh CORRECTIONBILL > /d01/netcracker/rbm/rbmdev/infinys_root/a_script_logs/Sms_CORRECTIONBILL_$random5.log 2>&1
+sendINVNUM_SmsEmail_correctionbill(){
+	cd /d01/root/rbm/dev/infinys_root/Project_1ENG/process
+	./sgma_filetransfer.sh CORRECTIONBILL > /d01/root/rbm/dev/infinys_root/a_script_logs/Sms_CORRECTIONBILL_$random5.log 2>&1
 	sleep 2
-	./ebill_filetransfer.sh CORRECTIONBILL > /d01/netcracker/rbm/rbmdev/infinys_root/a_script_logs/Email_CORRECTIONBILL_$random5.log 2>&1
+	./ebill_filetransfer.sh CORRECTIONBILL > /d01/root/rbm/dev/infinys_root/a_script_logs/Email_CORRECTIONBILL_$random5.log 2>&1
 	sleep 2
-	./print_postprocessing.sh > /d01/netcracker/rbm/rbmdev/infinys_root/a_script_logs/Dresher_CORRECTIONBILL_$random5.log 2>&1
+	./print_postprocessINVNUM.sh > /d01/root/rbm/dev/infinys_root/a_script_logs/Dresher_CORRECTIONBILL_$random5.log 2>&1
 }
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -136,13 +135,13 @@ get_CDV_number(){
 	export mult_sum="$(echo "${mult_sum: -1}")" 
 }	
 get_input_date(){
-	echo -e 'Please, enter payment date in following format: YYYYMMDD'
+	echo -e 'Please, enter payment date in followINVNUM format: YYYYMMDD'
 	read input_date
 	export input_date="$(echo -e "$input_date" | sed -e 's/[[:space:]]*$//')"
 }
 
 get_amount(){
-	echo -e 'Please, enter amount in following format: 
+	echo -e 'Please, enter amount in followINVNUM format: 
 000000100'
 	read amount
 	export amount="$(echo -e "$amount")"
@@ -157,27 +156,27 @@ get_num_for_filename(){
 }
 
 get_file(){
-	echo "190506163000000400916390106414000001000000000""$amount""000000000000000000000000000000000000000000000000000000000        20190826
-1905061630000004009163901064140000010000000000000""$acc_num""$mult_sum""0""$amount""2010190314511104097887931""$gen""20190506""$input_date" >> /d01/netcracker/rbm/rbmdev/infinys_root/a_script_logs/"$input_date"_"$num_file".dat
+	echo "19056300000040091634000001000000000""$amount""000000000000000000000000000000000000000000000000000000000        20190826
+191630000004009163901140000010000000000000""$acc_num""$mult_sum""0""$amount""201019031451117931""$gen""20190506""$input_date" >> /d01/root/rbm/dev/infinys_root/a_script_logs/"$input_date"_"$num_file".dat
 }
 
 run_process(){
-	cp /d01/netcracker/rbm/rbmdev/infinys_root/a_script_logs/"$input_date"_"$num_file".dat /ub01/nifi/Payment/POSTAL/input
-	cd /d01/netcracker/rbm/rbmdev/infinys_root
+	cp /d01/root/rbm/dev/infinys_root/a_script_logs/"$input_date"_"$num_file".dat /ub01/nifi/Payment/POSTAL/input
+	cd /d01/root/rbm/dev/infinys_root
 	. ./infinys.env
-	export GENEVA_FIXEDDATE=""$input_date" 00000000"
-	NCPP -a "-mode POSTAL"  > /d01/netcracker/rbm/rbmdev/infinys_root/a_script_logs/NCPP_POSTAL_"$num_file".log 2>&1
-	print "POSTAL process is finished, pls check log: /d01/netcracker/rbm/rbmdev/infinys_root/a_script_logs/NCPP_POSTAL_"$num_file".log"
+	export GEN_FIXEDDAT=""$input_date" 00000000"
+	NCPP -a "-mode POSTAL"  > /d01/root/rbm/dev/infinys_root/a_script_logs/NCPP_POSTAL_"$num_file".log 2>&1
+	print "POSTAL process is finished, pls check log: /d01/root/rbm/dev/infinys_root/a_script_logs/NCPP_POSTAL_"$num_file".log"
 	
 }
 
 
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-#BANKTRANSFER PAYMENT 
+#BANKTRANS PAYMENT 
 
 get_input_date_bank(){
-	echo -e 'Please, enter payment date in following format: YYYYMMDD'
+	echo -e 'Please, enter payment date in followINVNUM format: YYYYMMDD'
 	read input_date_b
 	export input_date_b="$(echo -e "$input_date_b" | sed -e 's/[[:space:]]*$//')"
 }
@@ -188,7 +187,7 @@ get_date_for_file_bank(){
 }
 
 get_amount_bank(){
-	echo -e 'Please, enter amount in HUF in following format: 2'
+	echo -e 'Please, enter amount in HUF in followINVNUM format: 2'
 	read amount_b
 	export amount_b="$(echo -e "$amount_b")"
 }
@@ -202,31 +201,31 @@ get_num_for_filename_bank(){
 }
 
 get_file_bank(){
-	echo ":20:040091639HUF-224
-:25:0400916390106414
+	echo ":20:040091UF-224
+:25:0400916901014
 :28C:00224/001
-:60F:C181120HUF0,
+:60F:C180HUF0,
 :61:"$date_for_file_b"1121C"$amount_b",NTRFNONREF//"$gen_b"
-:86:051?009500-INWARD PMT - CL?109500?20EREF+NOTPROVIDED?21SVWZ+SZLA:
-"$acc_num" RTNR+?220010?30GIBAHUHB?31HU7711607003777743000700000
-6?32XXXXXXXXXXXXX IRODA KFT
-:62M:C181121HUF448,
--" >>  /d01/netcracker/rbm/rbmdev/infinys_root/a_script_logs/MT940_kivonat_"$input_date_b"_"$num_file_b".txt
+:86:051?009500-IN PMT - CL?109500?20EREF+NOTPROVIDED?21SVWZ+SZLA:
+"$acc_num" RTNR+?220010?30GIBAHUHB?31HU0377774300700000
+6?32XXXXXXXXXXXX 
+:62M:C18121HU48,
+-" >>  /d01/root/rbm/dev/infinys_root/a_script_logs/MT940_kivonat_"$input_date_b"_"$num_file_b".txt
 }
 
 run_process_bank(){
-	cp /d01/netcracker/rbm/rbmdev/infinys_root/a_script_logs/MT940_kivonat_"$input_date_b"_"$num_file_b".txt /ub01/nifi/Payment/BANKTRANSFER/input
-	cd /d01/netcracker/rbm/rbmdev/infinys_root
+	cp /d01/root/rbm/dev/infinys_root/a_script_logs/MT940_kivonat_"$input_date_b"_"$num_file_b".txt /ub01/nifi/Payment/BANKTRANS/input
+	cd /d01/root/rbm/dev/infinys_root
 	. ./infinys.env
-	export GENEVA_FIXEDDATE=""$input_date_b" 00000000"
-	NCPP -a "-mode BANKTRANSFER" > /d01/netcracker/rbm/rbmdev/infinys_root/a_script_logs/NCPP_BANKTRANSFER_"$num_file_b"_$random5.log 2>&1
-	print "BANKTRANSFER Payment process is finished, pls check log: /d01/netcracker/rbm/rbmdev/infinys_root/a_script_logs/NCPP_BANKTRANSFER_"$num_file_b"_$random5.log"
+	export GEN_FIXEDDAT=""$input_date_b" 00000000"
+	NCPP -a "-mode BANKTRANS" > /d01/root/rbm/dev/infinys_root/a_script_logs/NCPP_BANKTRANS_"$num_file_b"_$random5.log 2>&1
+	print "BANKTRANS Payment process is finished, pls check log: /d01/root/rbm/dev/infinys_root/a_script_logs/NCPP_BANKTRANS_"$num_file_b"_$random5.log"
 }
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-#DEBTage
-run_debtage(){
-DEBTage -a "-forceAccount "$acc_num" -allocateOverpay" > /d01/netcracker/rbm/rbmdev/infinys_root/a_script_logs/DEBTage_"$acc_num"_$random5.log 2>&1
-print "DEBTage process is finished, pls check log: /d01/netcracker/rbm/rbmdev/infinys_root/a_script_logs/DEBTage_"$acc_num"_$random5.log"
+#DEBT
+run_DEBT(){
+DEBT -a "-forceAccount "$acc_num" -allocateOverpay" > /d01/root/rbm/dev/infinys_root/a_script_logs/DEBT_"$acc_num"_$random5.log 2>&1
+print "DEBT process is finished, pls check log: /d01/root/rbm/dev/infinys_root/a_script_logs/DEBT_"$acc_num"_$random5.log"
 }
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 #Name for files
@@ -260,21 +259,21 @@ DD_auth(){
 	
 
 	
-echo "01FELHKI0201912122217000000A11895927    									
+echo "01FELHKI0201912122217000000A11    									
 02115          201912124843MTB Zrt. K”zpont      
-0302000153"$mode"A11895927    "$acc_num"              3333000000000022        Iron Man                           "$start_date""$end_date""$start_date"00000"$limit"Iron Man                           2545 Dunaalm s Kis Łt 27.                                                                 									
+0302000153"$mode"5927    "$acc_num"              3333000000000022        Man                           "$start_date""$end_date""$start_date"00000"$limit"Man                           2545 Dunaalm s Kis Łt 27.                                                                 									
 040001									
-0501000001		" >>  /d01/netcracker/rbm/rbmdev/infinys_root/a_script_logs/Direct_Debit_authorization_file_$start_date_$end_date_$num_file_DD.txt
+0501		" >>  /d01/root/rbm/dev/infinys_root/a_script_logs/Direct_Debit_authorization_file_$start_date_$end_date_$num_file_DD.txt
 
-	cp /d01/netcracker/rbm/rbmdev/infinys_root/a_script_logs/Direct_Debit_authorization_file_$start_date_$end_date_$num_file_DD.txt /d01/netcracker/rbm/rbmdev/infinys_root/VFHURB/data/inbound/NCPP/DDPAYAUTH/input
+	cp /d01/root/rbm/dev/infinys_root/a_script_logs/Direct_Debit_authorization_file_$start_date_$end_date_$num_file_DD.txt /d01/root/rbm/dev/infinys_root/Project/data/inbound/NCPP/DDPAYAUTH/input
 
-	cd /d01/netcracker/rbm/rbmdev/infinys_root
+	cd /d01/root/rbm/dev/infinys_root
 	source infinys.env
 	ulimit -c unlimited
 	export TRACE_LEVEL=FULL
 	export TRACE_ALL=ON
-	export GENEVA_FIXEDDATE="$start_date 00000000"
-	NCPP -a "-mode DDPAYAUTH" > /d01/netcracker/rbm/rbmdev/infinys_root/a_script_logs/Direct_Debit_auth_LOG_$start_date_$end_date_$num_file_DD.log 2>&1
+	export GEN_FIXEDDAT="$start_date 00000000"
+	NCPP -a "-mode DDPAYAUTH" > /d01/root/rbm/dev/infinys_root/a_script_logs/Direct_Debit_auth_LOG_$start_date_$end_date_$num_file_DD.log 2>&1
 
 	echo -e 'Direct Debit payment authorization process is finished!'
 	echo -e 'Please, check the rezult: '
@@ -282,7 +281,7 @@ echo "01FELHKI0201912122217000000A11895927
 	echo -e 'select * from accountdetails where account_num='$acc_num';'
 	echo -e 'select * from VFHU_DDPAYAUTHINFO;'
 	echo -e 'select * from paymentmethod;'
-	echo -e 'Pls check log here: /d01/netcracker/rbm/rbmdev/infinys_root/a_script_logs/Direct_Debit_auth_LOG_'$start_date'_'$end_date'_'$num_file_DD'.log'
+	echo -e 'Pls check log here: /d01/root/rbm/dev/infinys_root/a_script_logs/Direct_Debit_auth_LOG_'$start_date'_'$end_date'_'$num_file_DD'.log'
 
 	
 }
@@ -291,37 +290,37 @@ echo "01FELHKI0201912122217000000A11895927
  DD_request () {
 	export num_file_DD_request="$(echo "$(shuf -i 1000-9999 -n 1)")"
 	echo -e 'pls do not forget to set SYSdateValue date the first in BD!'
-	echo -e 'pls paste date for processing in the following format:20200112'
+	echo -e 'pls paste date for processINVNUM in the followINVNUM format:20200112'
 	echo -e 'note: date = payment_due_dat.billsummary - 8 days'
 	read date_DD_request
 	export date_DD_request="$(echo "$date_DD_request")"
-	cd /d01/netcracker/rbm/rbmdev/infinys_root
+	cd /d01/root/rbm/dev/infinys_root
 	source infinys.env
 	ulimit -c unlimited
 	export TRACE_LEVEL=FULL
 	export TRACE_ALL=ON
-	export GENEVA_FIXEDDATE="$date_DD_request 00000000"
-	NCPP -a "-mode DDPAYREQS" > /d01/netcracker/rbm/rbmdev/infinys_root/a_script_logs/DD_pay_request_$num_file_DD_request.log 2>&1
+	export GEN_FIXEDDAT="$date_DD_request 00000000"
+	NCPP -a "-mode DDPAYREQS" > /d01/root/rbm/dev/infinys_root/a_script_logs/DD_pay_request_$num_file_DD_request.log 2>&1
 	echo -e 'Check: select * from paymentrequest; - request should be created and status = 2
-Check: /d01/netcracker/rbm/rbmdev/infinys_root/VFHURB/data/outbound/NCPP/DDPAYREQS/output - request file should be created
-log here: /d01/netcracker/rbm/rbmdev/infinys_root/a_script_logs/DD_pay_request_LOG_'$num_file_DD_request'.log'
+Check: /d01/root/rbm/dev/infinys_root/Project/data/outbound/NCPP/DDPAYREQS/output - request file should be created
+log here: /d01/root/rbm/dev/infinys_root/a_script_logs/DD_pay_request_LOG_'$num_file_DD_request'.log'
  }
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 #Direct Debit payment response
 DD_response () {
 	export num_file_DD_response="$(echo "$(shuf -i 1000-9999 -n 1)")"
 	echo -e 'pls do not forget to set SYSdateValue date the first in BD!'
-	echo -e 'pls paste date for processing in the following format:20200112'
+	echo -e 'pls paste date for processINVNUM in the followINVNUM format:20200112'
 	echo -e 'note: date = payment_due_dat.billsummary - 8 days'
 	read date_DD_response
 	export date_DD_response="$(echo "$date_DD_response")"
-	cd /d01/netcracker/rbm/rbmdev/infinys_root
+	cd /d01/root/rbm/dev/infinys_root
 	source infinys.env
 	ulimit -c unlimited
 	export TRACE_LEVEL=FULL
 	export TRACE_ALL=ON
-	export GENEVA_FIXEDDATE="$date_DD_response 00000000"
-	echo -e 'pls paste amount in the following format 20000'
+	export GEN_FIXEDDAT="$date_DD_response 00000000"
+	echo -e 'pls paste amount in the followINVNUM format 20000'
 	read amount
 	export amount="$(echo "$amount")" 
 	#echo -e 'pls paste account_num'
@@ -331,13 +330,13 @@ DD_response () {
 	export random_value6="$(echo "$(shuf -i 100000-999999 -n 1)")"
 	echo "01DETSTA0A11895927    202001140001"$date_DD_response"8846181941						
 0200000100000"$amount""$date_DD_response"00"$date_DD_response""$date_DD_response""$random_value4"   02529"$date_DD_response"000"$random_value6"1317   05008"$date_DD_response"658514500"$acc_num"                						                						
-030000010000000"$amount"000000000000000000000000000000000000000000000000						" >> /d01/netcracker/rbm/rbmdev/infinys_root/a_script_logs/Direct_Debit_response_file_$num_file_DD_response.txt
+030000010000000"$amount"000000000000000000000000000000000000000000000000						" >> /d01/root/rbm/dev/infinys_root/a_script_logs/Direct_Debit_response_file_$num_file_DD_response.txt
 
-	cp /d01/netcracker/rbm/rbmdev/infinys_root/a_script_logs/Direct_Debit_response_file_$num_file_DD_response.txt /d01/netcracker/rbm/rbmdev/infinys_root/VFHURB/data/inbound/NCPP/DDPAYRESP/input
+	cp /d01/root/rbm/dev/infinys_root/a_script_logs/Direct_Debit_response_file_$num_file_DD_response.txt /d01/root/rbm/dev/infinys_root/Project/data/inbound/NCPP/DDPAYRESP/input
 
-	NCPP -a "-mode DDPAYRESP" > /d01/netcracker/rbm/rbmdev/infinys_root/a_script_logs/Direct_Debit_LOG_response_file_$num_file_DD_response.log 2>&1
+	NCPP -a "-mode DDPAYRESP" > /d01/f/rbm/dev/infinys_root/a_script_logs/Direct_Debit_LOG_response_file_$num_file_DD_response.log 2>&1
 	echo -e 'Check: select * from paymentrequest; - request should be created and status = 3'
-	echo -e 'log here: /d01/netcracker/rbm/rbmdev/infinys_root/a_script_logs/Direct_Debit_response_file_'$num_file_DD_response'.log'
+	echo -e 'log here: /d01/root/rbm/dev/infinys_root/a_script_logs/Direct_Debit_response_file_'$num_file_DD_response'.log'
 	}
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 recursion () {
@@ -352,8 +351,8 @@ recursion () {
 	echo "5  - Test Bill"
 	echo "6  - Postal payment"
 	echo "7  - Bank transfer"
-	echo "8  - E2Vault process"
-	echo "9  - DEBTage"
+	echo "8  - vaultVV process"
+	echo "9  - DEBT"
 	echo "10 - Direct Debit payment authorization"
 	echo "11 - Direct Debit payment request"
 	echo "12 - Direct Debit payment response"
@@ -426,28 +425,28 @@ recursion () {
 			
 			if [ $key == 'y' ]; then
 				
-				export GENEVA_FIXEDDATE="$nbd 00000000"
+				export GEN_FIXEDDAT="$nbd 00000000"
 				
 				if [ $press == '1' ]; then
 					
-					BG -a "-a $acc_num" > /d01/netcracker/rbm/rbmdev/infinys_root/a_script_logs/BG_$acc_num-P001_$random5.log 2>&1
+					BB -a "-a $acc_num" > /d01/root/rbm/dev/infinys_root/a_script_logs/BB_$acc_num-P001_$random5.log 2>&1
 					
 				elif [ $press == '2' ]; then
 				
-					BG -a "-a $acc_num -bt termination" > /d01/netcracker/rbm/rbmdev/infinys_root/a_script_logs/BG_$acc_num-P001_$random5.log 2>&1
+					BB -a "-a $acc_num -bt termination" > /d01/root/rbm/dev/infinys_root/a_script_logs/BB_$acc_num-P001_$random5.log 2>&1
 				
 				fi		
 					
 					if [ $? != 0 ]; then
-						echo "Error in BG command. Please check logs !!!"
+						echo "Error in BB command. Please check logs !!!"
 					else
-						echo "BG completed Successfully!!!"
-						ING -a '-ir 1' > /d01/netcracker/rbm/rbmdev/infinys_root/a_script_logs/ING_$acc_num-P001_$random5.log 2>&1
+						echo "BB completed Successfully!!!"
+						INVNUM -a '-ir 1' > /d01/root/rbm/dev/infinys_root/a_script_logs/INVNUM_$acc_num-P001_$random5.log 2>&1
 						
 						if [ $? != 0 ]; then
-							echo "Error in ING. Please check logs !!!"
+							echo "Error in INVNUM. Please check logs !!!"
 						else
-							echo "ING completed Successfully!!!"
+							echo "INVNUM completed Successfully!!!"
 							
 							#ТУТ ДОБАВЛЕН КУСОК ДЛЯ ПОЛУЧЕНИЯ PROCESS instance ID
 							iid=`sqlplus -S $DATABASE <<EOF
@@ -456,7 +455,7 @@ recursion () {
 							DECLARE
 								v_id NUMBER(9);
 							BEGIN
-								SELECT PROCESS_INSTANCE_ID INTO v_id FROM PROCESSINSTANCELOG WHERE PROCESS_DEF_ID IN (SELECT PROCESS_DEF_ID FROM PROCESSDEFINITION WHERE IMAGE_NAME = 'BDW');
+								SELECT PROCESS_INSTANCE_ID INTO v_id FROM PROCESSINSTANCELOG WHERE PROCESS_DEF_ID IN (SELECT PROCESS_DEF_ID FROM PROCESSDEFINITION WHERE IMAGE_NAME = 'BGW');
 								dbms_output.put_line (v_id);
 							EXCEPTION
 								WHEN NO_DATA_FOUND
@@ -467,25 +466,25 @@ recursion () {
 							QUIT
 							EOF` 
 							
-							BDW -m WORK -p $iid -a "-formatterID 1 -bill" > /d01/netcracker/rbm/rbmdev/infinys_root/a_script_logs/BDW_work_$acc_num-P001_$random5.log 2>&1
+							BGW -m WORK -p $iid -a "-formatterID 1 -bill" > /d01/root/rbm/dev/infinys_root/a_script_logs/BGW_work_$acc_num-P001_$random5.log 2>&1
 							
 							if [ $? != 0 ]; then
-								echo "Error in BDW work command. Please check logs !!!"
+								echo "Error in BGW work command. Please check logs !!!"
 							else
-								echo "BDW work completed Successfully!!!"
-								BDW -m COMPLETE -p $iid -a "-formatterID 1 -bill" > /d01/netcracker/rbm/rbmdev/infinys_root/a_script_logs/BDW2_compl_$acc_num-P001_$random5.log 2>&1
+								echo "BGW work completed Successfully!!!"
+								BGW -m COMPLETE -p $iid -a "-formatterID 1 -bill" > /d01/root/rbm/dev/infinys_root/a_script_logs/BGW2_compl_$acc_num-P001_$random5.log 2>&1
 								
 								if [ $? != 0 ]; then
-									echo "Error in BDW Complete command. Please check logs !!!"
+									echo "Error in BGW Complete command. Please check logs !!!"
 								else
-									echo "BDW Complete process completed Successfully!!!"
+									echo "BGW Complete process completed Successfully!!!"
 				
 	#								output_line=`sqlplus $DATABASE<<EOF
 	#								set echo off;
-	#								set heading off;
+	#								set headINVNUM off;
 	#								set feedback off;
 	#						
-	#								UPDATE JOB SET JOB_STATUS=2 WHERE JOB_ID IN (SELECT JOB_ID FROM JOBHASFILE WHERE MANAGED_FILE_ID IN (SELECT  MAX(CAST(RTRIM(LTRIM( ARCHIVE_NAME, 'GF'), '.GMF') AS INT)) FROM FORMATTINGREQUEST WHERE ACCOUNT_NUM=$acc_num));
+	#								UPDATE JOB SET JOB_STATUS=2 WHERE JOB_ID IN (SELECT JOB_ID FROM JOBHASFILE WHERE MANAGED_FILE_ID IN (SELECT  MAX(CAST(RTRIM(LTRIM( ARCHIVE_NAME, 'GF'), '.GMF') AS INT)) FROM FORMATTINVNUMREQUEST WHERE ACCOUNT_NUM=$acc_num));
 	#								COMMIT;
 	#								exit;
 	#								EOF`
@@ -493,15 +492,15 @@ recursion () {
 	#								echo "JOB status updated"
 									
 
-									MFM -a "-fileType production_bill_data -plugInPath $INFINYS_ROOT/RB/lib/libGnvJIBP.so" > /d01/netcracker/rbm/rbmdev/infinys_root/a_script_logs/MFM_acc$acc_num-test_001_$random5.log 2>&1
+									FMF -a "-fileType production_bill_data -plugInPath $INFINYS_ROOT/RB/lib/liBBnvJIBP.so" > /d01/root/rbm/dev/infinys_root/a_script_logs/FMF_acc$acc_num-test_001_$random5.log 2>&1
 					
 				
 									if [ $? != 0 ]; then
-										echo "Error in MFM process. Please check logs !!!"
+										echo "Error in FMF process. Please check logs !!!"
 									else
-										echo "MFM completed Successfully!!!"
+										echo "FMF completed Successfully!!!"
 										
-										if grep -q "satisfies invoice suppression rules" /d01/netcracker/rbm/rbmdev/infinys_root/a_script_logs/MFM_acc$acc_num-test_001_$random5.log; then
+										if grep -q "satisfies invoice suppression rules" /d01/root/rbm/dev/infinys_root/a_script_logs/FMF_acc$acc_num-test_001_$random5.log; then
 											
 											echo "Invoice suppressed as no chargeable entity exists for account $acc_num"
 											
@@ -510,9 +509,9 @@ recursion () {
 											
 											echo "DOC1 process started"
 											
-											E1EXP > /d01/netcracker/rbm/rbmdev/infinys_root/a_script_logs/EXP_$acc_num_$random5.log 2>&1
+											1EXT > /d01/root/rbm/dev/infinys_root/a_script_logs/EXP_$acc_num_$random5.log 2>&1
 						
-											cd $INFINYS_ROOT/VFHURB/data/outbound/E1EXP/PRODUCTION
+											cd $INFINYS_ROOT/Project/data/outbound/1EXT/PRODUCTION
 										
 											grep -l $acc_num *$nbd* > 1.txt
 											datfile=$(head -n 1 1.txt)
@@ -524,18 +523,18 @@ recursion () {
 											rm 1.txt
 											
 											billref=$(grep -i BILLREF $datfile | cut -b 36-46)
-											bhct=$(grep -i BILLHANDLINGCODE $datfile | cut -b 36-)
+											bhct=$(grep -i BILLHANDLINVNUMCODE $datfile | cut -b 36-)
 											bhc=${bhct%?}
 																	
-											cp $INFINYS_ROOT/VFHURB/data/outbound/E1EXP/PRODUCTION/$datfile $INFINYS_ROOT/VFHU_ENGAGEONE/input/periodicbill
+											cp $INFINYS_ROOT/Project/data/outbound/1EXT/PRODUCTION/$datfile $INFINYS_ROOT/Project_1ENG/input/periodicbill
 										
-											cd $INFINYS_ROOT/VFHU_ENGAGEONE/process
-											export DOC1_ROOT=$INFINYS_ROOT/VFHU_ENGAGEONE
-											./vfhg_periodicbill.sh > /d01/netcracker/rbm/rbmdev/infinys_root/a_script_logs/Doc1_$acc_num_$random5.log 2>&1
+											cd $INFINYS_ROOT/Project_1ENG/process
+											export DOC1_ROOT=$INFINYS_ROOT/Project_1ENG
+											./vfhg_periodicbill.sh > /d01/root/rbm/dev/infinys_root/a_script_logs/Doc1_$acc_num_$random5.log 2>&1
 											
 											sleep 2
 											
-											cd $INFINYS_ROOT/VFHU_ENGAGEONE/logs/periodicbill
+											cd $INFINYS_ROOT/Project_1ENG/logs/periodicbill
 																		
 											
 											if grep -q "DOC1 doc1gen successful" $logfile; then
@@ -544,27 +543,27 @@ recursion () {
 												print "Invoice Name = ${billref}_${acc_num}_${nbd}_${bhc}.pdf"
 												
 												if [ $bhc == 'PAPER' ] || [ $bhc == 'INTPOST' ]; then
-													print "Please find Invoice in /d01/netcracker/rbm/rbmdev/infinys_root/VFHU_ENGAGEONE/output/periodicbill/print"
+													print "Please find Invoice in /d01/root/rbm/dev/infinys_root/Project_1ENG/output/periodicbill/print"
 												elif [ $bhc == 'NOPRINT' ]; then
-													print "Please find Invoice in /d01/netcracker/rbm/rbmdev/infinys_root/VFHU_ENGAGEONE/output/periodicbill/noprint"
+													print "Please find Invoice in /d01/root/rbm/dev/infinys_root/Project_1ENG/output/periodicbill/noprint"
 												else
-													print "Please find Invoice in /d01/netcracker/rbm/rbmdev/infinys_root/VFHU_ENGAGEONE/output/periodicbill/ebill"
+													print "Please find Invoice in /d01/root/rbm/dev/infinys_root/Project_1ENG/output/periodicbill/ebill"
 												fi
 												
 											else
 												print "DOC1 process completed"
-												print "Invoice generation failed with errors!!! Please check log /d01/netcracker/rbm/rbmdev/infinys_root/VFHU_ENGAGEONE/logs/periodicbill/$logfile"
-												print "Please find Invoice in /d01/netcracker/rbm/rbmdev/infinys_root/VFHU_ENGAGEONE/output/"
+												print "Invoice generation failed with errors!!! Please check log /d01/root/rbm/dev/infinys_root/Project_1ENG/logs/periodicbill/$logfile"
+												print "Please find Invoice in /d01/root/rbm/dev/infinys_root/Project_1ENG/output/"
 					
 											fi #DOC1 
-										fi	#if grep -q "satisfies invoice suppression rules" MFM_acc$acc_num-test_001.log; then
-									fi #MFM error
-								fi #BDW
-							fi #BDW
-						fi  #ING
-					fi #BG error
+										fi	#if grep -q "satisfies invoice suppression rules" FMF_acc$acc_num-test_001.log; then
+									fi #FMF error
+								fi #BGW
+							fi #BGW
+						fi  #INVNUM
+					fi #BB error
 					
-				sending_SmsEmail_periodic	
+				sendINVNUM_SmsEmail_periodic	
 			
 			else
 				echo "Process Aborted !!!"
@@ -596,7 +595,7 @@ recursion () {
 					
 					SELECT TO_CHAR(BILL_DAT,'YYYYMMDD'), BILL_SEQ INTO v_billreq_dtm, v_billseq FROM BILLREQUEST WHERE ACCOUNT_NUM=$acc_num AND BILL_TYPE_ID in (5,9) AND BILL_REQUEST_STATUS=2;
 				   
-					SELECT REQUEST_STATUS INTO v_formreq_status FROM FORMATTINGREQUEST WHERE ACCOUNT_NUM=$acc_num AND BILL_SEQ = v_billseq;
+					SELECT REQUEST_STATUS INTO v_formreq_status FROM FORMATTINVNUMREQUEST WHERE ACCOUNT_NUM=$acc_num AND BILL_SEQ = v_billseq;
 				  
 					IF v_formreq_status = '1' THEN
 						dbms_output.put_line (v_billreq_dtm);
@@ -624,48 +623,48 @@ recursion () {
 			
 			else
 				
-				export GENEVA_FIXEDDATE="$v_billreq_dtm 00000000"
+				export GEN_FIXEDDAT="$v_billreq_dtm 00000000"
 				
-				ING -a '-ir 1' > /d01/netcracker/rbm/rbmdev/infinys_root/a_script_logs/ING_$acc_num-P001_$random5.log 2>&1
+				INVNUM -a '-ir 1' > /d01/root/rbm/dev/infinys_root/a_script_logs/INVNUM_$acc_num-P001_$random5.log 2>&1
 				
 				if [ $? != 0 ]; then
-					echo "Error in ING. Please check logs !!!"
+					echo "Error in INVNUM. Please check logs !!!"
 				else
-					echo "ING completed Successfully!!!"
-					BDW -m WORK -a "-formatterID 1" > /d01/netcracker/rbm/rbmdev/infinys_root/a_script_logs/BDW_work_$acc_num-P001_$random5.log 2>&1
+					echo "INVNUM completed Successfully!!!"
+					BGW -m WORK -a "-formatterID 1" > /d01/root/rbm/dev/infinys_root/a_script_logs/BGW_work_$acc_num-P001_$random5.log 2>&1
 					
 					if [ $? != 0 ]; then
-						echo "Error in BDW work command. Please check logs !!!"
+						echo "Error in BGW work command. Please check logs !!!"
 					else
-						echo "BDW work completed Successfully!!!"
-						BDW -m COMPLETE -a "-formatterID 1" > /d01/netcracker/rbm/rbmdev/infinys_root/a_script_logs/BDW2_compl_acc$acc_num-P001_$random5.log 2>&1
+						echo "BGW work completed Successfully!!!"
+						BGW -m COMPLETE -a "-formatterID 1" > /d01/root/rbm/dev/infinys_root/a_script_logs/BGW2_compl_acc$acc_num-P001_$random5.log 2>&1
 						
 						if [ $? != 0 ]; then
-							echo "Error in BDW Complete command. Please check logs !!!"
+							echo "Error in BGW Complete command. Please check logs !!!"
 						else
-							echo "BDW Complete process completed Successfully!!!"
+							echo "BGW Complete process completed Successfully!!!"
 			
 							output_line=`sqlplus $DATABASE<<EOF
 							set echo off;
-							set heading off;
+							set headINVNUM off;
 							set feedback off;
 					
-							UPDATE JOB SET JOB_STATUS=2 WHERE JOB_ID IN (SELECT JOB_ID FROM JOBHASFILE WHERE MANAGED_FILE_ID IN (SELECT  MAX(CAST(RTRIM(LTRIM( ARCHIVE_NAME, 'GF'), '.GMF') AS INT)) FROM FORMATTINGREQUEST WHERE ACCOUNT_NUM=$acc_num));
+							UPDATE JOB SET JOB_STATUS=2 WHERE JOB_ID IN (SELECT JOB_ID FROM JOBHASFILE WHERE MANAGED_FILE_ID IN (SELECT  MAX(CAST(RTRIM(LTRIM( ARCHIVE_NAME, 'GF'), '.GMF') AS INT)) FROM FORMATTINVNUMREQUEST WHERE ACCOUNT_NUM=$acc_num));
 							COMMIT;
 							exit;
 							EOF`
 					
 							echo "JOB status updated"
 						
-							MFM -a "-fileType production_bill_data -plugInPath $INFINYS_ROOT/RB/lib/libGnvJIBP.so" > /d01/netcracker/rbm/rbmdev/infinys_root/a_script_logs/MFM_acc$acc_num-P001_$random5.log 2>&1
+							FMF -a "-fileType production_bill_data -plugInPath $INFINYS_ROOT/RB/lib/liBBnvJIBP.so" > /d01/root/rbm/dev/infinys_root/a_script_logs/FMF_acc$acc_num-P001_$random5.log 2>&1
 									
 							if [ $? != 0 ]; then
-								echo "Error in MFM process. Please check logs !!!"
+								echo "Error in FMF process. Please check logs !!!"
 							else
-								echo "MFM completed Successfully!!!"
-								E1EXP > /d01/netcracker/rbm/rbmdev/infinys_root/a_script_logs/EXP_$acc_num_$random5.log 2>&1
+								echo "FMF completed Successfully!!!"
+								1EXT > /d01/root/rbm/dev/infinys_root/a_script_logs/EXP_$acc_num_$random5.log 2>&1
 				
-								cd $INFINYS_ROOT/VFHURB/data/outbound/E1EXP/PRODUCTION
+								cd $INFINYS_ROOT/Project/data/outbound/1EXT/PRODUCTION
 							
 								grep -l $acc_num *$billreq* > 1.txt
 								datfile=$(head -n 1 1.txt)
@@ -676,22 +675,22 @@ recursion () {
 								
 								rm 1.txt
 							
-								cp $INFINYS_ROOT/VFHURB/data/outbound/E1EXP/PRODUCTION/$datfile $INFINYS_ROOT/VFHU_ENGAGEONE/input/creditnote
+								cp $INFINYS_ROOT/Project/data/outbound/1EXT/PRODUCTION/$datfile $INFINYS_ROOT/Project_1ENG/input/creditnote
 							
-								cd $INFINYS_ROOT/VFHU_ENGAGEONE/process
-								export DOC1_ROOT=$INFINYS_ROOT/VFHU_ENGAGEONE
-								./vfhg_creditnote.sh > /d01/netcracker/rbm/rbmdev/infinys_root/a_script_logs/Doc1_$acc_num_$random5.log 2>&1
+								cd $INFINYS_ROOT/Project_1ENG/process
+								export DOC1_ROOT=$INFINYS_ROOT/Project_1ENG
+								./vfhg_creditnote.sh > /d01/root/rbm/dev/infinys_root/a_script_logs/Doc1_$acc_num_$random5.log 2>&1
 								
 								sleep 2
 								
-								cd $INFINYS_ROOT/VFHU_ENGAGEONE/logs/creditnote
+								cd $INFINYS_ROOT/Project_1ENG/logs/creditnote
 								
 								
 								if grep -q "DOC1 doc1gen successful" $logfile; then
 									print "Credit Note generated successfully"
-									print "Please find Credit Note in /d01/netcracker/rbm/rbmdev/infinys_root/VFHU_ENGAGEONE/output/creditnote"
+									print "Please find Credit Note in /d01/root/rbm/dev/infinys_root/Project_1ENG/output/creditnote"
 								else
-									print "Credit Note generation failed with errors!!! Please check log /d01/netcracker/rbm/rbmdev/infinys_root/VFHU_ENGAGEONE/logs/creditnote/$logfile"
+									print "Credit Note generation failed with errors!!! Please check log /d01/root/rbm/dev/infinys_root/Project_1ENG/logs/creditnote/$logfile"
 			
 								fi
 							fi
@@ -701,7 +700,7 @@ recursion () {
 				
 			fi
 			
-			sending_SmsEmail_creditnote
+			sendINVNUM_SmsEmail_creditnote
 			
 		else
 			echo "Process Aborted !!!"
@@ -743,7 +742,7 @@ recursion () {
 			
 			if [ $billreq == 'Norequest' ]; then
 			
-				echo "No pending Correction note request for $acc_num !!!"
+				echo "No pendINVNUM Correction note request for $acc_num !!!"
 				
 			elif [ $billreq == 'Nodata' ]; then
 			
@@ -758,17 +757,17 @@ recursion () {
 				if [ $perm == 'y' ]; then
 				
 					
-					export GENEVA_FIXEDDATE="$billreq 00000000"
+					export GEN_FIXEDDAT="$billreq 00000000"
 					
-					PreBG -a "-mode BILLCORRECTION" > /d01/netcracker/rbm/rbmdev/infinys_root/a_script_logs/PREBG_BC_$acc_num-P001_$random5.log 2>&1
+					PreBB -a "-mode BILLCORRECTION" > /d01/root/rbm/dev/infinys_root/a_script_logs/PREBB_BC_$acc_num-P001_$random5.log 2>&1
 					
 					if [ $? != 0 ]; then
 					
-						echo "Error in PreBG process. Please check logs !!!"
+						echo "Error in PreBB process. Please check logs !!!"
 					
 					else
 						
-						echo "PreBG for Correction bill ran successfully !!!"
+						echo "PreBB for Correction bill ran successfully !!!"
 						
 						invnum=`sqlplus -S $DATABASE <<EOF
 						set head off pages 0 feedback off serveroutput on
@@ -798,7 +797,7 @@ recursion () {
 											
 						echo "Correction bill invoice number is $invnum"		
 						
-						cd $INFINYS_ROOT/VFHURB/data/outbound/PreBG/BILLCORRECTION/output
+						cd $INFINYS_ROOT/Project/data/outbound/PreBB/BILLCORRECTION/output
 						
 						grep -l $invnum * >> 1.txt
 						datfile=$(head -n 1 1.txt)
@@ -810,25 +809,25 @@ recursion () {
 						rm 1.txt
 						
 						
-						cp $INFINYS_ROOT/VFHURB/data/outbound/PreBG/BILLCORRECTION/output/$datfile $INFINYS_ROOT/VFHU_ENGAGEONE/input/correctionbill
+						cp $INFINYS_ROOT/Project/data/outbound/PreBB/BILLCORRECTION/output/$datfile $INFINYS_ROOT/Project_1ENG/input/correctionbill
 						
-						cd $INFINYS_ROOT/VFHU_ENGAGEONE/process
-						export DOC1_ROOT=$INFINYS_ROOT/VFHU_ENGAGEONE
-						./vfhg_correctionbill.sh > /d01/netcracker/rbm/rbmdev/infinys_root/a_script_logs/Doc1_$acc_num_$random5.log 2>&1
+						cd $INFINYS_ROOT/Project_1ENG/process
+						export DOC1_ROOT=$INFINYS_ROOT/Project_1ENG
+						./vfhg_correctionbill.sh > /d01/root/rbm/dev/infinys_root/a_script_logs/Doc1_$acc_num_$random5.log 2>&1
 						
 						sleep 2
 						
-						cd $INFINYS_ROOT/VFHU_ENGAGEONE/logs/correctionbill
+						cd $INFINYS_ROOT/Project_1ENG/logs/correctionbill
 						
 						if grep -q "DOC1 doc1gen successful" $logfile; then
 							print "Correction Note generated successfully"
-							print "Please find Correction Note in /d01/netcracker/rbm/rbmdev/infinys_root/VFHU_ENGAGEONE/output/correctionbill"
+							print "Please find Correction Note in /d01/root/rbm/dev/infinys_root/Project_1ENG/output/correctionbill"
 						else
-							print "Correction Note generation failed with errors!!! Please check log /d01/netcracker/rbm/rbmdev/infinys_root/VFHU_ENGAGEONE/logs/correctionbill/$logfile"
+							print "Correction Note generation failed with errors!!! Please check log /d01/root/rbm/dev/infinys_root/Project_1ENG/logs/correctionbill/$logfile"
 						fi
 					
 					fi
-					sending_SmsEmail_correctionbill
+					sendINVNUM_SmsEmail_correctionbill
 				else
 				
 					echo "Process Aborted :( !!!"
@@ -878,16 +877,16 @@ recursion () {
 			
 			if [ $key == 'y' ]; then
 				
-				export GENEVA_FIXEDDATE="$nbd 00000000"
+				export GEN_FIXEDDAT="$nbd 00000000"
 				
 				if [ $press == '5' ]; then
-					BG -a "-a $acc_num -test -outputTestBillData" > /d01/netcracker/rbm/rbmdev/infinys_root/a_script_logs/BGTEST_$acc_num-P001_$random5.log 2>&1
+					BB -a "-a $acc_num -test -outputTestBillData" > /d01/root/rbm/dev/infinys_root/a_script_logs/BBTEST_$acc_num-P001_$random5.log 2>&1
 				fi		
 					
 					if [ $? != 0 ]; then
-						echo "Error in BG command. Please check logs !!!"
+						echo "Error in BB command. Please check logs !!!"
 					else
-						echo "BG completed Successfully!!!"
+						echo "BB completed Successfully!!!"
 						TBDP -a "-account $acc_num"
 						
 						if [ $? != 0 ]; then
@@ -895,15 +894,15 @@ recursion () {
 						else
 							echo "TBDP completed Successfully!!!"
 							
-								MFM -a "-fileType test_bill_data -plugInPath /d01/netcracker/rbm/rbmdev/infinys_root/RB/lib/libGnvJIBP.so" > /d01/netcracker/rbm/rbmdev/infinys_root/a_script_logs/MFM_$acc_num-test_001_$random5.log 2>&1
+								FMF -a "-fileType test_bill_data -plugInPath /d01/root/rbm/dev/infinys_root/RB/lib/liBBnvJIBP.so" > /d01/root/rbm/dev/infinys_root/a_script_logs/FMF_$acc_num-test_001_$random5.log 2>&1
 					
 				
 								if [ $? != 0 ]; then
-									echo "Error in MFM process. Please check logs !!!"
+									echo "Error in FMF process. Please check logs !!!"
 								else
-									echo "MFM completed Successfully!!!"
+									echo "FMF completed Successfully!!!"
 										
-									if grep -q "satisfies invoice suppression rules" /d01/netcracker/rbm/rbmdev/infinys_root/a_script_logs/MFM_$acc_num-test_001_$random5.log; then
+									if grep -q "satisfies invoice suppression rules" /d01/root/rbm/dev/infinys_root/a_script_logs/FMF_$acc_num-test_001_$random5.log; then
 											
 										echo "Invoice suppressed as no chargeable entity exists for account $acc_num"
 											
@@ -912,9 +911,9 @@ recursion () {
 											
 										echo "DOC1 process started"
 											
-										E1EXP > /d01/netcracker/rbm/rbmdev/infinys_root/a_script_logs/EXP_$acc_num_$random5.log 2>&1
+										1EXT > /d01/root/rbm/dev/infinys_root/a_script_logs/EXP_$acc_num_$random5.log 2>&1
 						
-										cd /d01/netcracker/rbm/rbmdev/infinys_root/VFHURB/data/outbound/E1EXP/TEST
+										cd /d01/root/rbm/dev/infinys_root/Project/data/outbound/1EXT/TEST
 										
 										grep -l $acc_num *$nbd* > 1.txt
 										datfile=$(head -n 1 1.txt)
@@ -926,22 +925,22 @@ recursion () {
 										rm 1.txt
 											
 										billref=$(grep -i BILLREF $datfile | cut -b 36-46)
-										bhct=$(grep -i BILLHANDLINGCODE $datfile | cut -b 36-)
+										bhct=$(grep -i BILLHANDLINVNUMCODE $datfile | cut -b 36-)
 										bhc=${bhct%?}
 											
 
-										cp /d01/netcracker/rbm/rbmdev/infinys_root/VFHURB/data/outbound/E1EXP/TEST/$datfile /d01/netcracker/rbm/rbmdev/infinys_root/a_script_logs/VFHU_ENGAGEONE/input/periodicbill
+										cp /d01/root/rbm/dev/infinys_root/Project/data/outbound/1EXT/TEST/$datfile /d01/root/rbm/dev/infinys_root/a_script_logs/Project_1ENG/input/periodicbill
 										
 										#ПРОВЕРИТЬ НАВИГАЦИЮ
-										cd /d01/netcracker/rbm/rbmdev/infinys_root/VFHU_ENGAGEONE/process
-										export DOC1_ROOT=/d01/netcracker/rbm/rbmdev/infinys_root/VFHU_ENGAGEONE
-										./vfhg_periodicbill.sh > /d01/netcracker/rbm/rbmdev/infinys_root/a_script_logs/Doc1_TEST_$acc_num_$random5.log 2>&1
+										cd /d01/root/rbm/dev/infinys_root/Project_1ENG/process
+										export DOC1_ROOT=/d01/root/rbm/dev/infinys_root/Project_1ENG
+										./vfhg_periodicbill.sh > /d01/root/rbm/dev/infinys_root/a_script_logs/Doc1_TEST_$acc_num_$random5.log 2>&1
 										
 										sleep 2
 										
 										
 										#ПРОВЕРИТЬ НАВИГАЦИЮ
-										cd /d01/netcracker/rbm/rbmdev/infinys_root/VFHU_ENGAGEONE/logs/periodicbill
+										cd /d01/root/rbm/dev/infinys_root/Project_1ENG/logs/periodicbill
 																		
 										#ПРОВЕРИТЬ ПОДПИСИ
 										if grep -q "DOC1 doc1gen successful" $logfile; then
@@ -950,16 +949,16 @@ recursion () {
 												print "Invoice Name = ${billref}_${acc_num}_${nbd}_${bhc}.pdf"
 												
 												if [ $bhc == 'PAPER' ] || [ $bhc == 'INTPOST' ]; then
-													print "Please find Invoice in /d01/netcracker/rbm/rbmdev/infinys_root/VFHU_ENGAGEONE/output/periodicbill/(print or test)"
+													print "Please find Invoice in /d01/root/rbm/dev/infinys_root/Project_1ENG/output/periodicbill/(print or test)"
 												elif [ $bhc == 'NOPRINT' ]; then
-													print "Please find Invoice in /d01/netcracker/rbm/rbmdev/infinys_root/VFHU_ENGAGEONE/output/periodicbill/(noprint or test)"
+													print "Please find Invoice in /d01/root/rbm/dev/infinys_root/Project_1ENG/output/periodicbill/(noprint or test)"
 												else
-													print "Please find Invoice in /d01/netcracker/rbm/rbmdev/infinys_root/VFHU_ENGAGEONE/output/periodicbill/(ebill or test)"
+													print "Please find Invoice in /d01/root/rbm/dev/infinys_root/Project_1ENG/output/periodicbill/(ebill or test)"
 												fi
 												
 											else
 												print "DOC1 process completed"
-												print "Invoice generation failed with errors!!! Please check log /d01/netcracker/rbm/rbmdev/infinys_root/VFHU_ENGAGEONE/logs/periodicbill/$logfile"
+												print "Invoice generation failed with errors!!! Please check log /d01/root/rbm/dev/infinys_root/Project_1ENG/logs/periodicbill/$logfile"
 					
 											fi
 										fi	
@@ -988,7 +987,7 @@ recursion () {
 
 	#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 		
-		#ВСТАВКА ДЛЯ BANKTRANSFER
+		#ВСТАВКА ДЛЯ BANKTRANS
 		elif [ $press == '7' ]; then
 			get_input_date_bank
 			get_date_for_file_bank
@@ -1001,16 +1000,16 @@ recursion () {
 
 	#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-		#ВСТАВКА ДЛЯ E2Vault
+		#ВСТАВКА ДЛЯ vaultVV
 		elif [ $press == '8' ]; then
-			evault
+			vaultVV
 		#КОНЕЦ ВСТАВКИ
 		
 	#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	
-		#ВСТАВКА ДЛЯ DEBTage
+		#ВСТАВКА ДЛЯ DEBT
 		elif [ $press == '9' ]; then
-			run_debtage
+			run_DEBT
 		#КОНЕЦ ВСТАВКИ
 		
 	#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1039,7 +1038,7 @@ recursion () {
 print -n "Do you want to do this script for another account ??? Press y / n to continue :"
 read continue
 if [ $continue == 'y' ]; then
-		cd /d01/netcracker/rbm/rbmdev/infinys_root
+		cd /d01/root/rbm/dev/infinys_root
 		recursion
 elif [ $continue == 'n' ]; then
 		echo "понял! не буду!"
@@ -1047,7 +1046,7 @@ elif [ $continue == 'n' ]; then
 fi
 }
 
-cd /d01/netcracker/rbm/rbmdev/infinys_root
+cd /d01/root/rbm/dev/infinys_root
 source infinys.env
 ulimit -c unlimited
 export TRACE_LEVEL=FULL
