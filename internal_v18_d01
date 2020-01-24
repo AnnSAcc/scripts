@@ -65,7 +65,7 @@ vaultVV(){
 	
 	sleep 10
 	
-	./execProcess.sh
+	./exProc.sh
 	print "vaultVV is finished"
 	
 	
@@ -76,7 +76,7 @@ vaultVV(){
 #SMS amd EMAIL PERIODIC
 sendINVNUM_SmsEmail_periodic (){
 	cd /d01/root/rbm/dev/infinys_root/Project_1ENG/process
-	./sgma_filetransfer.sh PERIODICBILL > /d01/root/rbm/dev/infinys_root/a_script_logs/Sms_PERIODIC_$random5.log 2>&1
+	./sf_filetran.sh PERIODICBILL > /d01/root/rbm/dev/infinys_root/a_script_logs/Sms_PERIODIC_$random5.log 2>&1
 	sleep 2
 	./ebill_filetransfer.sh PERIODICBILL > /d01/root/rbm/dev/infinys_root/a_script_logs/Email_PERIODIC_$random5.log 2>&1
 	sleep 2
@@ -86,7 +86,7 @@ sendINVNUM_SmsEmail_periodic (){
 #SMS amd EMAIL CREDITNOTE
 sendINVNUM_SmsEmail_creditnote (){
 	cd /d01/root/rbm/dev/infinys_root/Project_1ENG/process
-	./sgma_filetransfer.sh CREDITNOTE > /d01/root/rbm/dev/infinys_root/a_script_logs/Sms_CREDITNOTE_$random5.log 2>&1
+	./sf_filetran.sh CREDITNOTE > /d01/root/rbm/dev/infinys_root/a_script_logs/Sms_CREDITNOTE_$random5.log 2>&1
 	sleep 2
 	./ebill_filetransfer.sh CREDITNOTE > /d01/root/rbm/dev/infinys_root/a_script_logs/Email_CREDITNOTE_$random5.log 2>&1
 	sleep 2
@@ -96,7 +96,7 @@ sendINVNUM_SmsEmail_creditnote (){
 #SMS amd EMAIL CORRECTIONBILL
 sendINVNUM_SmsEmail_correctionbill(){
 	cd /d01/root/rbm/dev/infinys_root/Project_1ENG/process
-	./sgma_filetransfer.sh CORRECTIONBILL > /d01/root/rbm/dev/infinys_root/a_script_logs/Sms_CORRECTIONBILL_$random5.log 2>&1
+	./sf_filetran.sh CORRECTIONBILL > /d01/root/rbm/dev/infinys_root/a_script_logs/Sms_CORRECTIONBILL_$random5.log 2>&1
 	sleep 2
 	./ebill_filetransfer.sh CORRECTIONBILL > /d01/root/rbm/dev/infinys_root/a_script_logs/Email_CORRECTIONBILL_$random5.log 2>&1
 	sleep 2
